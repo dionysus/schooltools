@@ -1,5 +1,7 @@
 # Shortcuts
 
+![screenshot](shortcuts.png)
+
 These are shortcuts I've added to chrome to make some simple tasks easier:
 
 `youtube_timestamp` - copies the current YouTube timestamp to the clipboard. I like to re-upload all my lectures to YouTube and timestamp important parts with notes. This makes grabbing the time easy.
