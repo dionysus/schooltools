@@ -100,6 +100,7 @@ int main(int argc, char *argv[]) {
   int base = strtol(argv[2], NULL, 10);
   unsigned int vaddr = strtoul (argv[1], NULL, base);
 
+  print_stats();
   calc_paddr(vaddr);
   return 0;
 }
