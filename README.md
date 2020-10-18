@@ -16,17 +16,18 @@ These are small javascript macros I've added to my Chrome bookmarks to perform s
 - `dl_bbco` - creates a download link for Blackboard Collaborate videos
 - `dl_mymedia` - creates a download link for UToronto MyMedia videos
 
-## paging_algs
+## OS related
+### paging_algs
 To visualize all the steps of page replacement algorithms, including `Clock`, `First In First Out`, and `Least Recently Used`.This outputs each step and displays whether there is a `hit` or `miss` (or `check` when using `Clock`).
 
 language: python
 
-## virtual_address
+### virtual_address
 To perform and visualize the steps of a linear virtual address trace.
 
 language: C
 
-## multilevel_address
+### multilevel_address
 To perform and visualize the steps of a multi-level virtual address trace.
 
 language: C
