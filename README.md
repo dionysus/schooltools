@@ -12,3 +12,6 @@ Little scripts and applets that have I've made to facilitate school stuff.
 
 ## paging_algs
 To visualize all the steps of page replacement algorithms, including `Clock`, `First In First Out`, and `Least Recently Used`.This outputs each step and displays whether there is a `hit` or `miss` (or `check` when using `Clock`).
+
+## virtual_address
+To perform and visualize the steps of a virtual address trace.
