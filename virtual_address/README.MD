@@ -8,7 +8,7 @@ This might look something like this:
 
 ## Setup
 
-This C script requires setting up some given file system properties in `vaddr_input.h` to function. Namely, the sizes of the virtual address space (`VADDR_SIZE`), the physical memory size (`PHYS_MEMSIZE`), and the page size (`PAGE_SIZE`). Then, the dummy page virtual number entries (`VPNENTRY`).
+This C script requires setting up some given parameters of the paging system in `vaddr_input.h` to function. Namely, the sizes of the virtual address space (`VADDR_SIZE`), the physical memory size (`PHYS_MEMSIZE`), and the page size (`PAGE_SIZE`). Then, the dummy page virtual number entries (`VPNENTRY`).
 
 ```
 int VADDR_SIZE = 32 * 1024;
@@ -35,7 +35,7 @@ In our example, `./vaddr 0x128a 16` is used for this virtual address in base 16 
 
 ## Output
 
-The resulting output shows the values at each stage up to the final physical address. It is a little verbose, but does so to provide enough info and numbers to allow one to check each step thoroughly.
+The resulting output shows the values at each stage up to the final physical address. It is a little verbose, but does so to provide enough info and numbers to allow one to check each step thoroughly. It will also display `Fault!` if at some point a page fault occurs.
 
 For this example, the virtual address of `0x128a` is translated to a physical address of `0x428a`.
 
