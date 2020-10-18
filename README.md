@@ -10,6 +10,12 @@
                                                                                   
 Little scripts and applets that have I've made to facilitate school stuff.
 
+## shortcuts
+These are small javascript macros I've added to my Chrome bookmarks to perform some quick functions:
+- `youtube_timestamp` - copy current youtube timestamp to clipboard
+- `dl_bbco` - creates a download link for Blackboard Collaborate videos
+- `dl_mymedia` - creates a download link for UToronto MyMedia videos
+
 ## paging_algs
 To visualize all the steps of page replacement algorithms, including `Clock`, `First In First Out`, and `Least Recently Used`.This outputs each step and displays whether there is a `hit` or `miss` (or `check` when using `Clock`).
 
