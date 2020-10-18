@@ -12,5 +12,3 @@ unsigned int VPNENTRY[8] = {
   0x80000007,
   0x80000000
 };
-
-int vaddr = 0x128a;

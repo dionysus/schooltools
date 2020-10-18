@@ -1,10 +1,14 @@
 # Virtual Address Translation
 
-This is a virtual address translation tool. It performs the translation from a virtual address to a physical one, for some dummy memory examples.
+This is a virtual address translation tool. It performs the translation from a virtual address to a physical one, for some dummy memory examples which asks you to perform a virtual address trace.
+
+This might look something like this:
+
+![screenshot](vaddr.png)
 
 ## Setup
 
-This C script requires setting up some given file system properties in `vaddr_input.h` to function. Namely, the sizes of the virtual address (`VADDR_SIZE`), the physical memory size (`PHYS_MEMSIZE`), and the page size (`PAGE_SIZE`). Then, the page virtual number entries (`VPNENTRY`), and lastly the `vaddr` to translate
+This C script requires setting up some given file system properties in `vaddr_input.h` to function. Namely, the sizes of the virtual address space (`VADDR_SIZE`), the physical memory size (`PHYS_MEMSIZE`), and the page size (`PAGE_SIZE`). Then, the dummy page virtual number entries (`VPNENTRY`).
 
 ```
 int VADDR_SIZE = 32 * 1024;
@@ -21,15 +25,13 @@ unsigned int VPNENTRY[8] = {
   0x80000007,
   0x80000000
 };
-
-int vaddr = 0x128a;
 ```
 
 ## Run
 
-After setup, run `vaddr.sh` in the terminal.
+After setup, compile the C code with a `make`, then, in the terminal, run the script with two args: the virtual address, and the base that it is input as.
 
-Note that you might need to modify the permissions to run it properly for the first time (`chmod +x vaddr.sh`).
+In our example, `./vaddr 0x128a 16` is used for this virtual address in base 16 (hex, as is evident by the prefix `0x`).
 
 ## Output
 

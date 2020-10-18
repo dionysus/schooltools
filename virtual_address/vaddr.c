@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 #include "vaddr_input.h"
 
 // prints bits with space after each byte (bit * 4)
@@ -70,8 +71,7 @@ unsigned int calc_paddr(unsigned int vaddr) {
 
 }
 
-int main() {
-
+void print_stats(){
   int num_offset_bits = log2(PAGE_SIZE);
   int num_pages = VADDR_SIZE / PAGE_SIZE;
   int num_bits_index = log2(num_pages);
@@ -87,6 +87,18 @@ int main() {
   printf("Num Physical Address Bits: %d \n", num_paddr_bits);
 
   printf("----------------------------------------------------------------\n");
+}
+
+int main(int argc, char *argv[]) {
+
+  // Check enough arguments.
+  if (argc != 3) {
+      puts ("Not enough arguments");
+      return 1;
+  }
+  // Convert to ulong WITH CHECKING!
+  int base = strtol(argv[2], NULL, 10);
+  unsigned int vaddr = strtoul (argv[1], NULL, base);
 
   calc_paddr(vaddr);
   return 0;
