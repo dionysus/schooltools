@@ -15,6 +15,7 @@ These are small javascript macros I've added to my Chrome bookmarks to perform s
 - `youtube_timestamp` - copy current youtube timestamp to clipboard
 - `dl_bbco` - creates a download link for Blackboard Collaborate videos
 - `dl_mymedia` - creates a download link for UToronto MyMedia videos
+- `dl_canvas` - creates a download link for UBC Canvas media files
 
 ## OS related
 ### paging_algs
