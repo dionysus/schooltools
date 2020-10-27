@@ -4,13 +4,10 @@
 
 javascript: ytplayer = document.getElementById("movie_player");
 time = ytplayer.getCurrentTime();
-if (typeof el !== "undefined") {
-  const el = document.createElement("textarea");
-}
+el = document.getElementById("ytcopypaster");
+if (el == null) var el = document.createElement("textarea");
+el.id = "ytcopypaster";
 el.value = new Date(time * 1000).toISOString().substr(11, 8);
-el.setAttribute("readonly", "");
-el.style.position = "absolute";
-el.style.left = "-9999px";
 document.body.appendChild(el);
 el.select();
 document.execCommand("copy");
